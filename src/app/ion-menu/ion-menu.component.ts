@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Storage } from '@ionic/storage';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-ion-menu',
@@ -20,10 +22,17 @@ export class IonMenuComponent implements OnInit {
     }
   ];
   
-  constructor() { }
+  constructor(
+    private storage: Storage,
+    private router: Router
+  ) { }
 
-  ngOnInit() {
-    console.log('IonMenuComponent');    
+  ngOnInit() {    
+  }
+
+  logoff() {
+    this.storage.remove('CurrentUser');
+    this.router.navigate(['/login']);
   }
 
 }

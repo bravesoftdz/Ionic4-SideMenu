@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AuthGuard } from './guard/auth.guard';
+import { AuthGuard } from '../guard/auth.guard';
 import { IonMenuComponent } from './ion-menu/ion-menu.component';
 
 const routes: Routes = [
